@@ -1,0 +1,25 @@
+
+#root {
+  margin: 0 auto;
+}
+
+.boxes {
+ display: flex;
+ gap: 20px;
+ justify-content: center;
+ align-items: center;
+}
+
+.boxes__box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-size: 2em;
+}
+
+.active {
+  background-color: blue;
+}
