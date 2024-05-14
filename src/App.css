@@ -1,25 +1,18 @@
-
-#root {
+.promo-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 800px; 
   margin: 0 auto;
 }
 
-.boxes {
- display: flex;
- gap: 20px;
- justify-content: center;
- align-items: center;
-}
+.promo-card {
+  border : 2px solid #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
 
-.boxes__box {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  color: white;
-  text-align: center;
-  line-height: 200px;
-  font-size: 2em;
-}
-
-.active {
-  background-color: blue;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 }
