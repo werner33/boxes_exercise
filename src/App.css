@@ -16,3 +16,24 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+.single-pokemon {
+  font-family: arial, sans-serif;
+  border: 1px solid green;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.single-pokemon__name {
+  text-transform: capitalize;
+}
+
+.black-background {
+  background-color: black;
+  color: white;
+}
