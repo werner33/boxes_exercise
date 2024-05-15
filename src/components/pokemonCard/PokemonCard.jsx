@@ -1,6 +1,6 @@
 
 
-function PokemonCard ({singlePokemon, hasBlackBackground}) {
+function PokemonCard ({singlePokemon, hasBlackBackground, color="red"}) {
 
   // const capitalizedName = singlePokemon.name.charAt(0).toUpperCase() + singlePokemon.name.slice(1);
 
