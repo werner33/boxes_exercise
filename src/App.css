@@ -51,3 +51,14 @@
   background-color: black;
   color: white;
 }
+
+.pokemon-app__header {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    align-self: center;
+  }
+}
