@@ -11,7 +11,7 @@ function App() {
   // well update the state with setPokemon
   const [pokemon, setPokemon] = useState([]);
   const [offset, setOffset] = useState(0);
-  const [count, setCount] = useState(0);
+
 
   // reach out to some API
   // get some data
@@ -46,7 +46,6 @@ function App() {
   const loadMorePokemon = () => {
     // asynchronous  
     setOffset(offset + 10);
-    setCount(count + 1);
   }
 
 
@@ -60,7 +59,7 @@ function App() {
           className="pokemon-app__load-more"
           onClick={loadMorePokemon}
         > Load more Pokemon</button>
-        <h1>{count}</h1>
+        <h1 className='pokemon-app__page-number' >{offset / 10 + 1}</h1>
       </header>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5

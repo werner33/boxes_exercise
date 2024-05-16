@@ -14,6 +14,11 @@ body {
       justify-content: space-between;
     }
 
+    &__page-number{
+      margin: 0;
+      align-self: center;
+    }
+
     &__load-more {
       background-color: rgb(58, 111, 94);
       color: white;
