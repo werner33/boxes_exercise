@@ -72,7 +72,7 @@ function App() {
         className="pokemon-app__load-more"
         onClick={loadMorePokemon}
       > Load more Pokemon</button>
-      <p>{pageNumber}</p>
+      <p>Page: {pageNumber}</p>
       </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
