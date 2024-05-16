@@ -1,18 +1,37 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
 .pokemon-app {
   width: 800px; 
   margin: 0 auto;
+
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__page-number{
+      margin: 0;
+      align-self: center;
+    }
+
+    &__load-more {
+      background-color: rgb(58, 111, 94);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1.4em;
+      margin: 20px 0;
+      cursor: pointer;
+    }
 }
 
-.pokemon-app__load-more {
-  background-color: rgb(58, 111, 94);
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: none;
-  font-size: 1.4em;
-  margin: 20px 0;
-  cursor: pointer;
-}
+
 
 .promo-card-container {
   display: grid;
@@ -32,7 +51,6 @@
 }
 
 .single-pokemon {
-  font-family: arial, sans-serif;
   border: 1px solid green;
   padding: 20px;
   border-radius: 10px;
@@ -41,11 +59,12 @@
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+  &__name {
+    text-transform: capitalize;
+  }
 }
 
-.single-pokemon__name {
-  text-transform: capitalize;
-}
 
 .black-background {
   background-color: black;

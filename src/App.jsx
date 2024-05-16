@@ -1,18 +1,7 @@
 import {useState, useEffect} from 'react';
 
-import './App.css'
+import './App.scss'
 
-
-// SCSS and BEM
-// create a new app
-// layouts (rows of boxes, grid, single box centered)
-// review state (useState)
-// toggle effect (with conditional classes or styling)
-// select effect (one box is blue at a time)
-// toggle effect across six boxes
-// build simple component
-// made component customizable with props
-// fetching data 
 
 import PokemonCard from './components/pokemonCard/PokemonCard';
 
@@ -22,6 +11,7 @@ function App() {
   // well update the state with setPokemon
   const [pokemon, setPokemon] = useState([]);
   const [offset, setOffset] = useState(0);
+
 
   // reach out to some API
   // get some data
@@ -64,10 +54,13 @@ function App() {
   // iterate through each one and render
   return (
     <div className="pokemon-app">
-      <button 
-        className="pokemon-app__load-more"
-        onClick={loadMorePokemon}
-      > Load more Pokemon</button>
+      <header className='pokemon-app__header'>
+        <button 
+          className="pokemon-app__load-more"
+          onClick={loadMorePokemon}
+        > Load more Pokemon</button>
+        <h1 className='pokemon-app__page-number' >{offset / 10 + 1}</h1>
+      </header>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
           // if(index % 3 === 0) setBlackBackground = !setBlackBackground;
