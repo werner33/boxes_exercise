@@ -22,6 +22,7 @@ function App() {
   // well update the state with setPokemon
   const [pokemon, setPokemon] = useState([]);
   const [offset, setOffset] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1)
 
   // reach out to some API
   // get some data
@@ -56,6 +57,8 @@ function App() {
   const loadMorePokemon = () => {
     // asynchronous  
     setOffset(offset + 10);
+    setPageNumber(pageNumber + 1)
+
   }
 
 
@@ -64,10 +67,13 @@ function App() {
   // iterate through each one and render
   return (
     <div className="pokemon-app">
+      <div className="pokemon-app__header">
       <button 
         className="pokemon-app__load-more"
         onClick={loadMorePokemon}
       > Load more Pokemon</button>
+      <p>Page: {pageNumber}</p>
+      </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
           // if(index % 3 === 0) setBlackBackground = !setBlackBackground;
