@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-import './App.css'
+import './App.scss'
 
 
 // SCSS and BEM
@@ -58,8 +58,13 @@ function App() {
     // asynchronous  
     setOffset(offset + 10);
     setPageNumber(pageNumber + 1)
-
   }
+
+  const previousPage = () => {
+    setPageNumber(pageNumber - 1)
+    setOffset(offset - 10);
+  }
+
 
 
   // let setBlackBackground = false;
@@ -68,11 +73,15 @@ function App() {
   return (
     <div className="pokemon-app">
       <div className="pokemon-app__header">
-      <button 
-        className="pokemon-app__load-more"
-        onClick={loadMorePokemon}
-      > Load more Pokemon</button>
-      <p>Page: {pageNumber}</p>
+        <button 
+          className="pokemon-app__load-more"
+          onClick={loadMorePokemon}
+        > Load more Pokemon</button>
+      <div className="pokemon-app__pages">
+        {offset > 1 && <button onClick={previousPage}>Prev</button>} 
+        <p>Page: {pageNumber}</p>
+        <button onClick={loadMorePokemon}>Next</button>
+      </div>
       </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
