@@ -1,6 +1,18 @@
 .pokemon-app {
   width: 800px; 
   margin: 0 auto;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.pokemon-app__page-num {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .pokemon-app__load-more {

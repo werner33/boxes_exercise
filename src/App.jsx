@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react';
 
 import './App.css'
 
-
 // SCSS and BEM
 // create a new app
 // layouts (rows of boxes, grid, single box centered)
@@ -13,6 +12,8 @@ import './App.css'
 // build simple component
 // made component customizable with props
 // fetching data 
+// working with paginated data
+// what is a dependency array and how does it work
 
 import PokemonCard from './components/pokemonCard/PokemonCard';
 
@@ -64,10 +65,15 @@ function App() {
   // iterate through each one and render
   return (
     <div className="pokemon-app">
-      <button 
-        className="pokemon-app__load-more"
-        onClick={loadMorePokemon}
-      > Load more Pokemon</button>
+      <div className="row">
+        <button 
+          className="pokemon-app__load-more"
+          onClick={loadMorePokemon}
+        > 
+          Load more Pokemon
+        </button>
+        <div className="pokemon-app__page-num">{(offset+10)/10}</div>
+      </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
           // if(index % 3 === 0) setBlackBackground = !setBlackBackground;
