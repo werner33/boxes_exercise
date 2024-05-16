@@ -1,10 +1,10 @@
-.pokemon-app {
+.pokemon-list {
   width: 800px; 
   margin: 0 auto;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.pokemon-app__page-num {
+.pokemon-list__page-num {
   font-weight: 600;
   font-size: 1.5em;
 }
@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.pokemon-app__load-more {
+.pokemon-list__load-more {
   background-color: rgb(58, 111, 94);
   color: white;
   padding: 20px;
