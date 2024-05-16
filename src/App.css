@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .pokemon-list {
   width: 800px; 
   margin: 0 auto;
@@ -37,11 +42,15 @@
   border-radius: 10px;
   padding: 20px;
   cursor: pointer;
+  text-decoration: none;
+ 
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+
 
 .single-pokemon {
   font-family: arial, sans-serif;
@@ -49,6 +58,7 @@
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
+  color: black;
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
