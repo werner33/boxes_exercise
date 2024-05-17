@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
+import './DefaultLayout.scss'
 
 
 const DefaultLayout = () => {
 
     return ( 
-        <Outlet/>
+        <div className="default-layout">
+            <Outlet/>
+        </div>
     )
 }
 

@@ -43,12 +43,14 @@ function PokemonDetailView() {
             return `${feet}'0${inches}"`;
       }
 
-      const convertHectogrmsToPounds = (hectograms) => {
+      const convertHectogramsToPounds = (hectograms) => {
         const pounds = (hectograms / 4.536).toFixed(1);
 
         return `${pounds} lbs.`
       }
 
+      const types = ['NORMAL', 'FIRE', 'WATER', 'ELECTRIC', 'GRASS', 'ICE', 'FIGHTING', 'POISON', 'GROUND',
+       'FLYING', 'PSYCHIC', 'BUG', 'ROCK', 'GHOST', 'DRAGON', 'DARK', 'STEEL', 'FAIRY'];
 
   return (
     <>
@@ -56,10 +58,11 @@ function PokemonDetailView() {
             <div className='pokemon-detail-card' >
                 <img className='pokemon-detail-card__img' src={currentPokemon.sprites.front_default} alt={currentPokemon} />
                 <header className='pokemon-detail-card__header'>
-                    <p className='pokemon-detail-card__name'>{currentPokemon.id} {currentPokemon.name.toUpperCase()}</p>
+                    <p className='pokemon-detail-card__id'>{currentPokemon.id}</p>
+                    <p className='pokemon-detail-card__name'>{currentPokemon.name.toUpperCase()}</p>
                 </header>
                 <p className='pokemon-detail-card__type'>{currentPokemon.types.map((obj,index) => {
-                    return <span key={index}>{obj.type.name} </span>}
+                    return <span className={`pokemon-detail-card__type-box ${types.find(type => type.toUpperCase() == obj.type.name.toUpperCase())}`} key={index}>{obj.type.name.toUpperCase()} </span>}
                     )}
                 </p>
                 <section className='pokemon-detail-card__size'>
@@ -69,7 +72,7 @@ function PokemonDetailView() {
                     </div>
                     <div className="pokemon-detail-card__weight">
                         <p className='pokemon-detail-card__abv'>WT</p>
-                        <p className='pokemon-detail-card-value'>{convertHectogrmsToPounds(currentPokemon.weight)}</p>
+                        <p className='pokemon-detail-card-value'>{convertHectogramsToPounds(currentPokemon.weight)}</p>
                     </div>
                 </section>
                 <section className='pokemon-detail-card__info'>

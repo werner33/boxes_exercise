@@ -1,52 +1,82 @@
+$grass: #92F282;
+$poison: #ED94FF;
+$normal: #AAAA99;
+$fire: #FF4422;
+$water: #3399FF;
+$electric: #FFCC32;
+$ice: #65CCFF;
+$fighting: #BA5644;
+$ground: #DDBB55;
+$flying: #8899FF;
+$psychic: #FF5699;
+$bug: #AABB22;
+$rock: #BBAA66;
+$ghost: #6666BB;
+$dragon: #7666EE;
+$dark: #775544;
+$steel: #AAAABB;
+$fairy: #EE98EE;
 
 
 .pokemon-detail-card {
     height: 350px;
-    width: 600px;
-    margin: 0 auto;
-    border: 2px solid black;
+    width: 500px;
+    margin: 50% 0;
+    border: 1px solid black;
     display: grid;
-    grid-template-columns: 30% repeat(4, 12%);
-    grid-template-rows:  15% 20% 25% 30%;
+    grid-template-columns: 30% repeat(3, 15%);
+    grid-template-rows:  15% 15% 20% 40%;
     gap: 4%;
-    padding: 1%;
+    padding: 2%;
 
     &__img {
         grid-row: span 3;
         grid-column: 1;
         align-self: center;
-        height: 10rem;
-        width: 10rem;
+        height: 12rem;
+        width: 12rem;
     }
 
     &__header{
         grid-row: 1;
-        grid-column: 2 / 7;
+        grid-column: 2 / 6;
         display: flex;
         align-items: center;
+        gap: 4%;
         padding: 2%;
-        background-color: red;
+        background: linear-gradient(0deg, rgba(255,156,165,1) 0%, rgba(239,48,49,1) 22%);
         border: 1px solid black;
         border-radius: .4em;
         color: #fff;
         box-shadow: .4em .4em .4em rgb(187, 187, 187);
     }
 
-    &__name{
+    &__name, &__id {
         font-weight: 600;
-        text-shadow: .1em .1em 0 gray;
+        font-size: 1.2em;
+        text-shadow: .1em .1em .1em gray;
     }
 
     &__type{
         grid-row: 2;
         grid-column: 3 / 5;
         display: flex;
+        align-items: center;
         gap: 4%;
+    }
+    
+    &__type-box{
+        padding: 2% 4%;
+        border: 1px solid black;
+        font-size: 1.2em;
+        color: #fff;
+        text-shadow: .1em .1em 0 gray;
+        border-radius: .2em;
     }
 
     &__size {
         grid-row: 3;
-        grid-column: 3 / 7;
+        grid-column: 3 / 6;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,6 +91,7 @@
         border-bottom: 2px dotted gray;
         align-items: center;
         justify-content: space-around;
+        padding: 2% 0;
         
     }
 
@@ -68,17 +99,95 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        padding: 2% 0;
     }
 
     &__info {
         grid-row: 4;
-        grid-column: span 6;
+        grid-column: span 5;
         border: 3px solid black;
         border-radius: .4em;
         padding: 0 10%;
+        display: flex;
+        background: radial-gradient(circle, rgba(255,255,255,1) 86%, rgba(255,156,165,1) 90%, rgba(239,48,49,1) 100%);
     }
 
     &__entry {
-        
+        align-self: center;
     }
+
+
+}
+
+
+.GRASS {
+    background-color: $grass;
+}
+
+.POISON {
+    background-color: $poison;
+}
+
+.NORMAL {
+    background-color: $normal;
+}
+
+.FIRE {
+    background-color: $fire;
+}
+
+.WATER {
+    background-color: $water;
+}
+
+.ELECTRIC {
+    background-color: $electric;
+}
+
+.ICE {
+    background-color: $ice;
+}
+
+.FIGHTING {
+    background-color: $fighting;
+}
+
+.GROUND {
+    background-color: $ground;
+}
+
+.FLYING {
+    background-color: $flying;
+}
+
+.PSYCHIC {
+    background-color: $psychic;
+}
+
+.BUG {
+    background-color: $bug;
+}
+
+.ROCK {
+    background-color: $rock;
+}
+
+.GHOST {
+    background-color: $ghost;
+}
+
+.DRAGON {
+    background-color: $dragon;
+}
+
+.DARK {
+    background-color: $dark;
+}
+
+.STEEL {
+    background-color: $steel;
+}
+
+.FAIRY {
+    background-color: $fairy;
 }
