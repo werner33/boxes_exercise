@@ -73,3 +73,42 @@ a {
   background-color: black;
   color: white;
 }
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemon-detail-view__info {
+  width: 600px;
+}
+
+.pokemon-detail-view__name {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pokemon-detail-view__image {
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pokemon-stats {
+  display: flex;
+  margin: 5px 0;
+}
+
+.stat-bar {
+  width: 60px;
+  height: 20px;
+  background-color: green;
+}
+
+
+.pets-list__container {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+}

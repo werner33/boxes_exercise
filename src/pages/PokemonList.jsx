@@ -20,7 +20,7 @@ const PokemonList = () => {
       }).catch(err => {
         console.error(err.message);
       })
-  }, [offset])
+  }, [offset]) // this runs when setOffset is called
 
 
   const loadMorePokemon = () => {

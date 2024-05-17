@@ -14,6 +14,7 @@ import DefaultLayout from './layout/DefaultLayout';
 // PAGES
 import PokemonList from './pages/PokemonList';
 import PokemonDetailView from './pages/PokemonDetailView';
+import PetsList from './pages/PetsList';
 
 // STYLING
 import './App.css'
@@ -30,6 +31,9 @@ import './App.css'
 // fetching data 
 // working with paginated data
 // what is a dependency array and how does it work
+// router - setting pages
+// loader - using state to track if we are loading anything
+ 
 
 
 function App() {
@@ -39,6 +43,7 @@ function App() {
       <Route path="/" element={<DefaultLayout/>}>
         <Route index element={<PokemonList />} />
         <Route path="/pokemon/:pokemonName" element={<PokemonDetailView />} />
+        <Route path="/pets" element={<PetsList />} />
       </Route>
   
     )
