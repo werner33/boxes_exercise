@@ -33,6 +33,7 @@ import './App.css'
 // what is a dependency array and how does it work
 // router - setting pages
 // loader - using state to track if we are loading anything
+// use effect with dependency array
  
 
 
