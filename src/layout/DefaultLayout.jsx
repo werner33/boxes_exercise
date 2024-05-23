@@ -8,7 +8,7 @@ import {
 import Navbar from './navbar/Navbar';
 
 // STYLING
-import './DefaultLayout.css';
+import './DefaultLayout.scss';
 
 const DefaultLayout = () => {
 
