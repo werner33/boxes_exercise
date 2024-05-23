@@ -36,6 +36,20 @@
   gap: 15px;
 }
 
+.navbar__mobile-menu-items {
+  border-bottom: 2px solid rgb(58, 111, 94);
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    color: black;
+    border-bottom: 1px solid rgb(58, 111, 94);
+    padding: 20px 15px;
+  }
+}
+
 /* // media query 440px
 // if screen is 440 px or smaller
   //hide menu items
