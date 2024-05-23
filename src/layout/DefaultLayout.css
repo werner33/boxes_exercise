@@ -42,6 +42,12 @@
   // show hamburger icon */
 
 @media screen and (max-width: 440px) {
+
+  .default-layout__page-content {
+    width: 90%;
+    margin: 5%;
+  }
+
   .navbar__menu-items {
     display: none;
   }

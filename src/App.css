@@ -36,6 +36,12 @@ a {
   gap: 40px;
 }
 
+@media  (max-width: 440px) {
+  .promo-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .promo-card {
   border : 2px solid #f1f1f1;
   border-radius: 10px;

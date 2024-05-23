@@ -28,7 +28,6 @@ const DefaultLayout = () => {
         </div>
       </nav>
       <div className="default-layout__page-content" >
-        <button>test</button>
         <Outlet />
       </div>
     </div>
