@@ -1,12 +1,19 @@
 import {useState, useEffect} from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 // COMPONENTS 
 import PokemonCard from '../components/pokemonCard/PokemonCard';
 
 const PokemonList = () => {
-  const [pokemon, setPokemon] = useState([]);
-  const [offset, setOffset] = useState(0);
 
+  // get page number from useSearchParams
+      //   getter   -   setter
+  let [searchParams, setSearchParams] = useSearchParams();
+  const pageNumber = searchParams.get('page') || 1;
+
+  const [pokemon, setPokemon] = useState([]);
+  // set initial page based on page number in query
+  const [offset, setOffset] = useState((pageNumber-1) * 10);  
 
    // when offset is updated, run this function
    useEffect(() => {
@@ -24,8 +31,8 @@ const PokemonList = () => {
 
 
   const loadMorePokemon = () => {
-    // asynchronous  
     setOffset(offset + 10);
+    setSearchParams({"page" : Number(pageNumber) + 1});
   }
 
   return (
@@ -37,7 +44,7 @@ const PokemonList = () => {
         > 
           Load more Pokemon
         </button>
-        <div className="pokemon-list__page-num">{(offset+10)/10}</div>
+        <div className="pokemon-list__page-num">{pageNumber}</div>
       </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
