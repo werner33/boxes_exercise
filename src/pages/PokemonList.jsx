@@ -44,6 +44,7 @@ const PokemonList = () => {
         > 
           Load more Pokemon
         </button>
+        <p>This is my new code for a new PR! </p>
         <div className="pokemon-list__page-num">{pageNumber}</div>
       </div>
       <div className="promo-card-container">
