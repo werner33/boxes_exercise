@@ -44,6 +44,7 @@ const PokemonList = () => {
         > 
           Load more Pokemon
         </button>
+        <p>This is my changed repo that will open a PR.</p>
         <div className="pokemon-list__page-num">{pageNumber}</div>
       </div>
       <div className="promo-card-container">
