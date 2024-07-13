@@ -37,6 +37,7 @@ const PokemonList = () => {
 
   return (
     <div className="pokemon-list">
+      <p>First PR to test if this works</p>
       <div className="row">
         <button 
           className="pokemon-list__load-more"
